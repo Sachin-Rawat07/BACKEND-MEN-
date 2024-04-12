@@ -42,9 +42,9 @@ app.get("/flights/:from-:to",(req,res)=>{
 
 //res.json
 
-// app.get("/info",(req,res)=>{
-//     res.json({user: "sachin" ,age: "20",id: "123rl21"});
-// });
+app.get("/info",(req,res)=>{
+    res.json({user: "sachin" ,age: "20",id: "123rl21"});
+});
 
 app.get("/info",(req,res)=>{
     // res.status(200).json({user: "sachin" ,age: "20",id: "123rl21"});
