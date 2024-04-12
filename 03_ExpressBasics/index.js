@@ -24,4 +24,31 @@ app.post("/login",(req,res)=>{
     res.send("login success");
 })
 
+
+app.get("/ab*cd",(req,res)=>{
+    res.send("<h1> Hello I am the regular expression</h1>");
+})
+
+app.get("/user/:id/status/:status_id",(req,res)=>{
+    res.send(req.params);
+})
+
+
+
+//defining a flight route as an example
+app.get("/flights/:from-:to",(req,res)=>{
+    res.send(req.params);
+})
+
+//res.json
+
+// app.get("/info",(req,res)=>{
+//     res.json({user: "sachin" ,age: "20",id: "123rl21"});
+// });
+
+app.get("/info",(req,res)=>{
+    // res.status(200).json({user: "sachin" ,age: "20",id: "123rl21"});
+    res.status(500).json({error:"Something went wrong"});
+});
+
 app.listen(3000,()=>console.log("Server is running at port 3000..."));
